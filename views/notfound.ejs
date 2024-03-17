@@ -1,0 +1,25 @@
+<%- include("partials/header"); -%>
+
+    <div class="left">
+        <div class="image-container green-background">
+            <img src="https://img.freepik.com/free-vector/404-error-lost-space-concept-illustration_114360-7971.jpg?t=st=1697899366~exp=1697899966~hmac=29fcc099ff82713019ac3d43a7ec1412d335d126160c48d5ef8f0a0b1a271a66" alt="">
+        </div>
+        <div class="search-container">
+            <h1 class="search-heading">Check your AQI</h1>
+            <form action="/" method="post">
+                <input type="text" name="city" placeholder="Enter city name" autocomplete="off"/>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+    </div>
+    <div class="right">
+        <div class="gray box" id="gray">
+            <h3><i class="fa-solid fa-face-sad-tear"></i><%=loc%></h3>
+            <p class="aqi">Current AQI </p>
+            <h1>NOT FOUND</h1>
+            <p class="desc">No precatuion available for this location.</p>
+        </div>
+    </div>
+
+    <%- include("partials/footer"); -%>

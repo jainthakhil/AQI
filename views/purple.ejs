@@ -1,0 +1,33 @@
+<%- include("partials/header"); -%>
+
+<div class="left">
+    <div class="image-container green-background">
+        <img src="https://img.freepik.com/free-vector/earth-pollution-concept-illustration_114360-14255.jpg?w=740&t=st=1697815078~exp=1697815678~hmac=6e971763f31436c64034be3bf7c8260c53d98471b9bdb159ad3a417e1ee240aa" alt="">
+    </div>
+    <div class="search-container">
+        <h1 class="search-heading">Check your AQI</h1>
+        <form action="/" method="post">
+            <input type="text" name="city" placeholder="Enter city name" autocomplete="off"/>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+</div>
+    <div class="right">
+        <div class="purple box" id="box">
+            <h3><i class="fa-solid fa-location-arrow"></i><%=loc%></h3>
+            <p  class="aqi">Current AQI </p>
+            <h1>
+                <%=aqi%>
+            </h1>
+            <h2>Very Unhealty</h2>
+            <p class="date-time">updated on <%= updateTime%>
+            <p class="desc">Health alert: The risk of health effects is increased for everyone.
+            </p>
+        </div>
+
+    </div>
+    
+
+
+    <%- include("partials/footer"); -%>

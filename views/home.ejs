@@ -1,0 +1,26 @@
+<%- include("partials/header"); -%>
+
+    <div class="search green-background">
+        <h1 class="search-heading">Check your AQI</h1>
+        <form action="/" method="post">
+            <input type="text" name="city" placeholder="location" />
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div class="box-container">
+        <div class="green box">
+            <h3><i class="fa-solid fa-location-arrow"></i><%=loc%></h3>
+            <p class="aqi">Current AQI </p>
+            <h1>
+                <%=aqi%>
+            </h1>
+            <h2>No risk</h2>
+            <p class="date-time">updated on <%= updateTime%>
+            </p>
+            <p class="desc"> Air quality is satisfactory, and air pollution poses little or no risk.</p>
+        </div>
+    </div>
+    
+
+
+    <%- include("partials/footer"); -%>

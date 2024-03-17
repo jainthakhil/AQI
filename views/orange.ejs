@@ -1,0 +1,33 @@
+<%- include("partials/header"); -%>
+
+<div class="left">
+    <div class="image-container green-background">
+        <img src="../images/orange.png" alt="">
+    </div>
+    <div class="search-container">
+        <h1 class="search-heading">Check your AQI</h1>
+        <form action="/" method="post">
+            <input type="text" name="city" placeholder="Enter city name" autocomplete="off" />
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+</div>
+    <div class="right">
+        <div class="orange box" id="box">
+            <h3><i class="fa-solid fa-location-arrow"></i><%=loc%></h3>
+            <p  class="aqi">Current AQI </p>
+            <h1>
+                <%=aqi%>
+            </h1>
+            <h2>Unhealty for sensitive group</h2>
+            <p class="date-time">updated on <%= updateTime%>
+            <p class="desc">Members of sensitive groups may experience health effects. The general public is less likely to be affected.
+            </p>
+        </div>
+
+    </div>
+    
+
+
+    <%- include("partials/footer"); -%>

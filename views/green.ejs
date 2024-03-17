@@ -1,0 +1,30 @@
+<%- include("partials/header"); -%>
+
+    <div class="left">
+        <div class="image-container green-background">
+            <img src="https://img.freepik.com/free-vector/world-concept-illustration_114360-1700.jpg?w=740&t=st=1697814731~exp=1697815331~hmac=53291a65f9f2f408eb7f7411ae28600e2d1a05465ad56297c94cf4e62820aba4" alt="">
+        </div>
+        <div class="search-container">
+            <h1 class="search-heading">Check your AQI</h1>
+            <form action="/" method="post">
+                <input type="text" name="city" placeholder="Enter city name" autocomplete="off"/>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+    </div>
+    <div class="right">
+        <div class="green box" id="green">
+            <h3><i class="fa-solid fa-location-arrow"></i><%=loc%></h3>
+            <p class="aqi">Current AQI </p>
+            <h1>
+                <%=aqi%>
+            </h1>
+            <h2>No risk</h2>
+            <p class="date-time">updated on <%= updateTime%>
+            </p>
+            <p class="desc"> Air quality is satisfactory, and air pollution poses little or no risk.</p>
+        </div>
+    </div>
+
+    <%- include("partials/footer"); -%>

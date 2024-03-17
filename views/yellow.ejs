@@ -1,0 +1,29 @@
+<%- include("partials/header"); -%>
+<div class="left">
+    <div class="image-container green-background">
+        <img src="https://img.freepik.com/free-vector/global-warming-concept-illustration_114360-8550.jpg?w=740&t=st=1697816247~exp=1697816847~hmac=8271e399464f9adf02e9492bdc3f29c8d476d3eb0980e561ea03abda862904ce" alt="">
+    </div>
+    <div class="search-container">
+        <h1 class="search-heading">Check your AQI</h1>
+        <form action="/" method="post">
+            <input type="text" name="city" placeholder="Enter city name" autocomplete="off"/>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+</div>
+    <div class="right">
+        <div class="yellow box" id="yellow">
+            <h3><i class="fa-solid fa-location-arrow"></i><%=loc%></h3>
+            <p  class="aqi">Current AQI </p>
+            <h1>
+                <%=aqi%>
+            </h1>
+            <h2>Acceptable</h2>
+            <p class="date-time">updated on <%= updateTime%>
+            <p class="desc">Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually
+                sensitive to air pollution.</p>
+        </div>
+    </div>
+
+    <%- include("partials/footer"); -%>
